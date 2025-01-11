@@ -42,5 +42,14 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "*.ts": "npx tslint"
   }
 }
